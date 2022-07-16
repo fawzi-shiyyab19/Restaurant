@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resturant</title>
+    <style>
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+        }
+        
+        li {
+          float: left;
+        }
+        
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        li a:hover {
+          background-color: #111;
+        }
+        </style>
+<style>
+    table, th, td {
+      border:1px solid black;
+    }
+    </style>
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+<link rel="icon" type="image/x-icon" href="fawzi.jpg"/>
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body>
+    <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a>about</a></li>
+      </ul>
+      </br>
+      <select name="cars" id="cars">
+        <option value="fruits" id="fru">Fruit and vegetables</option>
+        <option value="starchy" id="sta">Starchy food</option>
+        <option value="Dairy" id="da">Dairy</option>
+        <option value="Protein" id="pro">Protein</option>
+        <option value="Fat" id="fat">Fat</option>
+      </select>
+      <!-- <form id="form">
+        <br>
+        <input type="text" id="food_id" placeholder="Enter Food ID">
+        <br>
+        <input type="text" id="foodname" placeholder="Enter Food Name">
+        <br>
+        <input type="text" id="type" placeholder="Enter Food Type">
+        <br>
+        <input type="text" id="price" placeholder="Enter Food Price">
+        <br>
+        <input  type="submit" value="submit" id="Sub">
+        <br><br>        
+     </form> -->
+     <br>
+     <table border="4">
+        <tr>
+            <th>Id</th>
+            <td><input type="text" id="food_id" name="id" id ></td>
+            
+        </tr>
+        <tr>
+            <th>Foodname</th>
+            <td><input type="text" id="foodname" name="foodname"></td>
+            
+        </tr>
+        <tr>
+            <th>Type</th>
+            <td><input type="text" id="type" name="type"></td>
+            
+        </tr>
+        <tr>
+            <th>Price</th>
+            <td><input type="text" id="price" name="price"></td>
+            
+        </tr>
+        <tr id="btna">
+            <td><input type="button" name="button" id="btn" value="Add" onclick="AddRow()"></td>
+        </tr>
+     </table>
+    <br>
+<table border="4" id="show">
+<tr>
+    <th>Id</th>
+    <th>foodname</th>
+    <th>type</th>
+    <th>price</th>
+</tr>
+</table>
+<div id="tablDiv"></div>
+<a href="https://www.facebook.com/fawziakef.shiyyab" style="color:black ;"><i class="uil uil-facebook-f"></i></a>
+<a href="https://github.com/fawzi-shiyyab19"><i class="uil uil-github"></i></a>
+<script src="./app.js"></script>
+</body>
+</html>
