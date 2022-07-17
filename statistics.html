@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>resturant</title>
+    <title>Resturant</title>
     <style>
         ul {
           list-style-type: none;
@@ -30,67 +29,87 @@
         li a:hover {
           background-color: #111;
         }
+        body{
+            background-color: brown;
+        }
+        table{
+    margin-top:50px;
+    text-align: center;
+    background: #333;
+    color:#fff;
+}
+
         </style>
-<style>
-    table, th, td {
-      border:1px solid black;
-    }
-    </style>
-<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-<link rel="icon" type="image/x-icon" href="fawzi.jpg"/>
-<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 <body>
-    <ul>
-        <li><a class="active" href="#home">Home</a></li>
-       <li><a class="nav-link" href="statistics.html">Statistics</a>
-       </li>
-    </ul>
-      </br>
-<form id="form">
-    <div>
-      <label for="food-name">Food Name</label>
-      <input type="text" name="food-name" id="foodName" />
-    </div>
+    <a href="index.html" class="logo-img-link">
+        <img src="fawzi.jpg" width="50" height="50" />
+      </a>
+    <ul class="nav-lists">
+        <li>
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li>
+          <a class="nav-link" href="statistics.html">Statistics</a>
+        </li>
+      </ul>
+      <table>
+        <thead>
+          <tr>
+            <th>Food ID</th>
+            <th>Food Name</th>
+            <th>Food Type</th>
+            <th>Food Price</th>
+          </tr>
+        </thead>
 
-    <div>
-      <label for="food-type">Food Type</label>
-      <select name="food-type" id="foodType">
-        <option value="fruit-and-vegetables">Fruit and vegetables</option>
-        <option value="starchy-food">Starchy food</option>
-        <option value="dairy">Dairy</option>
-        <option value="protein">Protein</option>
-        <option value="fat">Fat</option>
-      </select>
-    </div>
+        <tbody id="table"></tbody>
+      </table>
+        
+      <script src="./statistics.js"></script>
+      <section>
+        <br>
+        <div>
+          <ul>
+            <li>
+              <a href="#"
+                ><ion-icon name="logo-facebook" class="social-icon"></ion-icon
+              ></a>
+            </li>
 
-    <div>
-      <label for="food-price">Food Price</label>
-      <input type="text" name="food-price" id="foodPrice" />
-    </div>
+            <li>
+              <a href="#"
+                ><ion-icon name="logo-instagram" class="social-icon"></ion-icon
+              ></a>
+            </li>
 
-    <div>
-      <input class="submit" type="submit" value="Submit" />
-    </div>
-  </form>
-</section>
+            <li>
+              <a href="#"
+                ><ion-icon name="logo-twitter" class="social-icon"></ion-icon
+              ></a>
+            </li>
+          </ul>
+        </div>
+        
 
-<section>
-  <table class="food-table">
-    <thead>
-      <tr>
-        <th>Food ID</th>
-        <th>Food Name</th>
-        <th>Food Type</th>
-        <th>Food Price</th>
-      </tr>
-    </thead>
+        <div>
+          <p>
+            © Copyright 2022 fawzi shiyyab
+          </p>
+        </div>
+      </section>
 
-    <tbody id="table"></tbody>
-  </table>
-<a href="https://www.facebook.com/fawziakef.shiyyab" style="color:black ;"><i class="uil uil-facebook-f"></i></a>
-<a href="https://github.com/fawzi-shiyyab19"><i class="uil uil-github"></i></a>
-<script src="./statistics.js"></script>
+      
+    </footer>
 
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./statistics.js"></script>
 </body>
 </html>
