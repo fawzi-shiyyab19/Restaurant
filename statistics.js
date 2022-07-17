@@ -1,49 +1,52 @@
 'use strict';
-let countiD = 1000;
-let foodList = [];
-const perentEl = document.getElementById("table");
 
+const formEl = document.getElementById("form");
+const perentEl = document.getElementById("table");
+let foodList = [];
+
+let countID = 1500;
 function Food(name, type, price) {
   this.id = countID++;
   this.name = name;
   this.type = type;
   this.price = price;
+}
 
-  foodList.push(this);
+formEl.addEventListener("submit", handelSubmit);
+
+function handelSubmit(event) {
+  event.preventDefault();
+
+  let name = event.target.foodName.value;
+  let type = event.target.foodType.value;
+  let price = event.target.foodPrice.value;
+  let food = new Food(name, type, price);
+  food.render();
 }
 
 Food.prototype.render = function () {
   let trEl = document.createElement("tr");
-  let tdId = document.createElement("td");
-  let tdName = document.createElement("td");
-  let tdType = document.createElement("td");
-  let tdPrice = document.createElement("td");
 
-  tdId.textContent = this.id;
-  tdName.textContent = this.name;
-  tdType.textContent = this.type;
-  tdPrice.textContent = `$ ${this.price}`;
-
-  trEl.appendChild(tdId);
-  trEl.appendChild(tdName);
-  trEl.appendChild(tdType);
-  trEl.appendChild(tdPrice);
+  trEl.innerHTML = `
+    <td>${this.id}</td>
+    <td>${this.name}</td>
+    <td>${this.type}</td>
+    <td>$${this.price}</td>
+  `;
 
   perentEl.appendChild(trEl);
 };
-
 function getData() {
-  let parsedData = JSON.parse(localStorage.getItem("Foods"));
-
-  if (parsedData) {
-    for (let i = 0; i < parsedData.length; i++) {
-      new Food(parsedData[i].name, parsedData[i].type, parsedData[i].price);
+    let parsedData = JSON.parse(localStorage.getItem("Foods"));
+  
+    if (parsedData) {
+      for (let i = 0; i < parsedData.length; i++) {
+        new Food(parsedData[i].name, parsedData[i].type, parsedData[i].price);
+      }
+    }
+  
+    for (let i = 0; i < foodList.length; i++) {
+      foodList[i].render();
     }
   }
-
-  
-  for (let i = 0; i < foodList.length; i++) {
-    foodList[i].render();
-  }
-}
-getData();
+  getData();
