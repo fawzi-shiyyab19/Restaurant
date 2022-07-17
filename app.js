@@ -3,7 +3,7 @@
 const formEl = document.getElementById("form");
 const perentEl = document.getElementById("table");
 
-let countID = 1;
+let countID = 1500;
 function Foodinformation(name, type, price) {
   this.id = countID++;
   this.name = name;
