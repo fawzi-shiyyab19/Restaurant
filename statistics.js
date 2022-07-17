@@ -1,8 +1,8 @@
 'use strict';
 
-const formEl = document.getElementById("form");
-const perentEl = document.getElementById("table");
+
 let foodList = [];
+const perentEl = document.getElementById("table");
 
 let countID = 1500;
 function Food(name, type, price) {
@@ -10,30 +10,25 @@ function Food(name, type, price) {
   this.name = name;
   this.type = type;
   this.price = price;
-}
-
-formEl.addEventListener("submit", handelSubmit);
-
-function handelSubmit(event) {
-  event.preventDefault();
-
-  let name = event.target.foodName.value;
-  let type = event.target.foodType.value;
-  let price = event.target.foodPrice.value;
-  let food = new Food(name, type, price);
-  food.render();
+  foodList.push(this);
 }
 
 Food.prototype.render = function () {
-  let trEl = document.createElement("tr");
-
-  trEl.innerHTML = `
-    <td>${this.id}</td>
-    <td>${this.name}</td>
-    <td>${this.type}</td>
-    <td>$${this.price}</td>
-  `;
-
+    let trEl = document.createElement("tr");
+    let tdId = document.createElement("td");
+    let tdName = document.createElement("td");
+    let tdType = document.createElement("td");
+    let tdPrice = document.createElement("td");
+  
+    tdId.textContent = this.id;
+    tdName.textContent = this.name;
+    tdType.textContent = this.type;
+    tdPrice.textContent =this.price;
+  
+    trEl.appendChild(tdId);
+    trEl.appendChild(tdName);
+    trEl.appendChild(tdType);
+    trEl.appendChild(tdPrice);
   perentEl.appendChild(trEl);
 };
 function getData() {
