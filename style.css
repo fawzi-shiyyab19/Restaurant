@@ -4,12 +4,7 @@ table{
     background: #333;
     color:#fff;
 }
-#show th, #show td{
-    padding: 13px;
-}
-#btna td input{
-    width: 100%;
-}
+
 body{
     background-color: brown ;
 }
