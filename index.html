@@ -46,13 +46,13 @@
         <li><a>about</a></li>
       </ul>
       </br>
-      <select name="cars" id="cars">
+      <!-- <select name="cars" id="cars">
         <option value="fruits" id="fru">Fruit and vegetables</option>
         <option value="starchy" id="sta">Starchy food</option>
         <option value="Dairy" id="da">Dairy</option>
         <option value="Protein" id="pro">Protein</option>
         <option value="Fat" id="fat">Fat</option>
-      </select>
+      </select> -->
       <!-- <form id="form">
         <br>
         <input type="text" id="food_id" placeholder="Enter Food ID">
@@ -101,15 +101,56 @@
     <th>price</th>
 </tr>
 </table> -->
-<main id="parent">
+<!-- <main id="parent">
     <form id="newForm">
         <input id="food_id" type="text" placeholder="Enter Foooooooood ID">
         <input id="foodname"       type="text" placeholder="enter food name">
         <input id="price" type="text" placeholder="enter food price">
         <input id="type" type="text" placeholder="enter food type">
-        <input id="button" type="button" value="button">
+        <input id="submit" type="submit" value="submit">
     </form>
-</main>
+</main> -->
+<form id="form">
+    <div class="form-group">
+      <label for="food-name">Food Name</label>
+      <input type="text" name="food-name" id="foodName" />
+    </div>
+
+    <div class="form-group">
+      <label for="food-type">Food Type</label>
+      <select name="food-type" id="foodType">
+        <option value="fruit-and-vegetables">Fruit and vegetables</option>
+        <option value="starchy-food">Starchy food</option>
+        <option value="dairy">Dairy</option>
+        <option value="protein">Protein</option>
+        <option value="fat">Fat</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="food-price">Food Price</label>
+      <input type="text" name="food-price" id="foodPrice" />
+    </div>
+
+    <div class="form-group">
+      <input class="submit" type="submit" value="Submit" />
+    </div>
+  </form>
+</section>
+
+<section>
+  <table class="food-table">
+    <thead>
+      <tr>
+        <th>Food ID</th>
+        <th>Food Name</th>
+        <th>Food Type</th>
+        <th>Food Price</th>
+      </tr>
+    </thead>
+
+    <tbody id="table"></tbody>
+  </table>
 <a href="https://www.facebook.com/fawziakef.shiyyab" style="color:black ;"><i class="uil uil-facebook-f"></i></a>
 <a href="https://github.com/fawzi-shiyyab19"><i class="uil uil-github"></i></a>
 <script src="./app.js"></script>
