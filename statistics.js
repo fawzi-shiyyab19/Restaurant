@@ -79,28 +79,29 @@ function getData() {
     document.getElementById('myChart'),
     config
   );
-  window.onload = function() {
-
-    var chart = new CanvasJS.Chart("chartContainer", {
-        animationEnabled: true,
-        title: {
-            text: "Desktop Search Engine Market Share - 2016"
-        },
-        data: [{
-            type: "pie",
-            startAngle: 240,
-            yValueFormatString: "##0.00\"%\"",
-            indexLabel: "{label} {y}",
-            dataPoints: [
-                {y: 79.45, label: "Google"},
-                {y: 7.31, label: "Bing"},
-                {y: 7.06, label: "Baidu"},
-                {y: 4.91, label: "Yahoo"},
-                {y: 1.26, label: "Others"}
-            ]
-        }]
-    });
-    chart.render();
-    
-    }
-    
+  
+  const data1 = {
+    labels: [
+      'Red',
+      'Blue',
+      'Yellow'
+    ],
+    datasets: [{
+      label: names,
+      data: prices,
+      backgroundColor: [
+        'rgb(255, 99, 132)',
+        'rgb(54, 162, 235)',
+        'rgb(255, 205, 86)'
+      ],
+      hoverOffset: 4
+    }]
+  };
+  const config1 = {
+    type: 'pie',
+    data: data1,
+  };
+  const myChart1 = new Chart(
+    document.getElementById('myChart1'),
+    config1
+  );
