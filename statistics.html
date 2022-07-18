@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resturant</title>
-    
+
     <style>
         ul {
           list-style-type: none;
@@ -42,13 +42,18 @@
 
         </style>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-
 </head>
 <body>
-    
+
     <div>
         <canvas id="myChart"></canvas>
+      </div>
+      <div>
+        <canvas id="myChart1"></canvas>
+      </div>
+      <div>
+        <canvas id="myChart1" style="width:100%;max-width:600px"></canvas>
+
       </div>
       <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
       
@@ -100,35 +105,7 @@
 
       
     </footer>
-    <script>
-
-        var xValues = ["fat", "protein", "fruits", "strunchy food"];
-        var yValues = [55, 49, 44, 24];
-        var barColors = [
-          "#b91d47",
-          "#00aba9",
-          "#2b5797",
-          "#e8c3b9",
-          
-        ];
-        
-        new Chart("myChart", {
-          type: "pie",
-          data: {
-            labels: xValues,
-            datasets: [{
-              backgroundColor: barColors,
-              data: yValues
-            }]
-          },
-          options: {
-            title: {
-              display: true,
-              text: "World Wide Wine Production 2018"
-            }
-          }
-        });
-        </script>
+    
         
     <script src="./statistics.js"></script>
     
