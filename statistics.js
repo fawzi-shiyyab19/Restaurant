@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 
 let foodList = [];
@@ -45,3 +45,62 @@ function getData() {
     }
   }
   getData();
+  const names=[];
+  const prices=[];
+  for (let i = 0; i < foodList.length; i++) {
+    names.push(foodList[i].name);
+    prices.push(foodList[i].price);
+  }
+  const labels = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+  ];
+
+  const data = {
+    labels: names,
+    datasets: [{
+      label: 'My First dataset',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: prices,
+    }]
+  };
+  
+  const config = {
+    type: 'bar',
+    data: data,
+    options: {}
+  };
+  const myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  );
+  window.onload = function() {
+
+    var chart = new CanvasJS.Chart("chartContainer", {
+        animationEnabled: true,
+        title: {
+            text: "Desktop Search Engine Market Share - 2016"
+        },
+        data: [{
+            type: "pie",
+            startAngle: 240,
+            yValueFormatString: "##0.00\"%\"",
+            indexLabel: "{label} {y}",
+            dataPoints: [
+                {y: 79.45, label: "Google"},
+                {y: 7.31, label: "Bing"},
+                {y: 7.06, label: "Baidu"},
+                {y: 4.91, label: "Yahoo"},
+                {y: 1.26, label: "Others"}
+            ]
+        }]
+    });
+    chart.render();
+    
+    }
+    
